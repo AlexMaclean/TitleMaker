@@ -40,7 +40,7 @@ public class TitleParser {
         Font font = new Font(args[1], Font.PLAIN, Integer.parseInt(args[2]));
         Title.Entry e = new Title.Entry(args[0], font);
         if (args.length == 4) {
-            e.text = args[3];
+            e.text = args[3].toUpperCase();
         }
         title.entries.add(e);
     }
