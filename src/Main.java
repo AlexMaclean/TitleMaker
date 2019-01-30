@@ -19,7 +19,7 @@ public class Main {
         }
         BufferedImage image = painter.paint();
 
-        File output = new File("transformed.png");
+        File output = new File("title.png");
         ImageIO.write(image, "png", output);
     }
 
