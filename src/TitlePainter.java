@@ -39,8 +39,6 @@ public class TitlePainter {
             offset += height + PADDING;
 
             g.drawString(entry.text, centered_x, offset - PADDING / 2);
-
-//            g.drawRect(centered_x, offset - PADDING / 2 - height, metrics.stringWidth(entry.text), height);
         }
 
         if (background != null) {
@@ -80,7 +78,7 @@ public class TitlePainter {
                 Color alpha = new Color(image.getRGB(x, y), true);
                 Color rgb = new Color(back_scaled.getRGB(x, y), true);
                 Color newColor = new Color(rgb.getRed(), rgb.getGreen(), rgb.getBlue(), alpha.getAlpha());
-                image.setRGB(x,y,  newColor.getRGB());
+                image.setRGB(x, y, newColor.getRGB());
             }
         }
     }

@@ -1,4 +1,4 @@
-import java.awt.*;
+import java.awt.Font;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -14,19 +14,16 @@ public class TitleParser {
         this.title = new Title();
     }
 
-    public Title parse() {
+    public Title parse() throws IOException {
 
-        try (BufferedReader reader = new BufferedReader(new FileReader(inputFile))) {
+        BufferedReader reader = new BufferedReader(new FileReader(inputFile));
 
-            while (true) {
-                String line = reader.readLine();
-                if (line == null || line.trim().equals("")) {
-                    break;
-                }
-                processLine(line);
+        while (true) {
+            String line = reader.readLine();
+            if (line == null || line.trim().equals("")) {
+                break;
             }
-        } catch (IOException e) {
-            e.printStackTrace();
+            processLine(line);
         }
 
         return title;
